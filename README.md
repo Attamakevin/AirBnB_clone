@@ -1,5 +1,5 @@
-<h.head/>The Holberton AIRBnB CLONE
-<b.header/>Description
+The Holberton AIRBnB CLONE
+Description
 This is the first step towards building your first full web application: the AirBnB clone. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
 the HBNB console
@@ -11,7 +11,7 @@ Do you remember the Shell? It’s exactly the same but limited to a specific use
 -Update attributes of an object
 -Destroy an object
 
-<b.header/> Commands and how to use it
+Commands and how to use it
 the command interpreter allow us to handle our data requirements with the following commands
 
 Command	Function
@@ -25,7 +25,7 @@ help	show the help of the commands
 Objects
 this is the objects that you can pass to the command console
 
-</b.header/>Object	Function
+Object	Function
 city	city of the reservation
 state	country state of the reservation
 place	Name of the place of reservation
@@ -42,7 +42,7 @@ Syntax:
 For help:
 help <command>
 
-<b.header/>Examples:
+Examples:
 For Help:
 (hbnb)help create
 create a new instace of a class
