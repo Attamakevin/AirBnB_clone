@@ -167,10 +167,10 @@ $
 <h3> 🤝 Contributors</h3>
 
 <a href="https://github.com/attamakevin" target="_blank">
-        <img src="https://avatars3.githubusercontent.com/u/65981858?s=460&u=917bf8544c11bfc83b5a9fd961fc72ef25e3188a&v=4" style="float: center; margin-right: 10px" height="65" width="65">
+        <img src="https://avatars.githubusercontent.com/u/111025849?s=400&v=4" style="float: center; margin-right: 10px" height="65" width="65">
 </a>
 <a href="https://github.com/stellargodwin" target="_blank">
-        <img src="https://avatars2.githubusercontent.com/u/60383826?s=400&u=2c0d5b6ad73dd12f883d6893f95dc9efc6f34f74&v=4" style="float: center; margin-right: 10px" height="65" width="65">
+        <img src="https://avatars.githubusercontent.com/u/111025849?s=400&u=14244fb30ab2a0c632354680087b3863c49f9a99&v=4" style="float: center; margin-right: 10px" height="65" width="65">
 </a>
 
 ---
