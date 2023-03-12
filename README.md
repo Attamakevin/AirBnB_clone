@@ -169,7 +169,7 @@ $
 <a href="https://github.com/attamakevin" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/111025849?s=400&v=4" style="float: center; margin-right: 10px" height="65" width="65">
 </a>
-<a href="https://github.com/stellargodwin" target="_blank">
+<a href="https://github.com/Gestello" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/113629126?v=4" style="float: center; margin-right: 10px" height="65" width="65">
 </a>
 
