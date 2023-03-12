@@ -22,7 +22,7 @@ class BaseModel:
         """
 
         if kwargs:
-            for key, value in kwargs.item():
+            for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
                     val = datetime.strptime(kwargs[key], "%Y-%m-%dT%H:%M:%S.%f")
                     setattr(self,key,val)
