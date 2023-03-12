@@ -12,7 +12,7 @@ import models
 class BaseModel:
 
 
-   """
+    """
 	defines all common attributes/methods for other classes
     """
 
@@ -32,7 +32,8 @@ class BaseModel:
       else:
           self.id = str(uuid4.now())
           self.created_at = datetime.now()
-          self.updated_at = datetime.noe()
+          self.updated_at = datetime.now()
+
   def __str__(self):
 
     """

@@ -14,7 +14,7 @@ This AirBnB clone project works with a console that uses the cmd python module. 
 <p> To get usage of the console use the following command
 
 ```
-git clone https://github.com/valen2510/AirBnB_clone.git
+git clone https://github.com/attamakevin/AirBnB_clone.git
 ```
 
 <h3> 🚀 Usage</h3>
@@ -170,7 +170,7 @@ $
         <img src="https://avatars.githubusercontent.com/u/111025849?s=400&v=4" style="float: center; margin-right: 10px" height="65" width="65">
 </a>
 <a href="https://github.com/stellargodwin" target="_blank">
-        <img src="https://avatars.githubusercontent.com/u/111025849?s=400&u=14244fb30ab2a0c632354680087b3863c49f9a99&v=4" style="float: center; margin-right: 10px" height="65" width="65">
+        <img src="https://avatars.githubusercontent.com/u/113629126?v=4" style="float: center; margin-right: 10px" height="65" width="65">
 </a>
 
 ---
