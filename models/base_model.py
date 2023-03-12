@@ -24,7 +24,7 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.item():
                 if key == "created_at" or key == "updated_at":
-                    val = datetime.strptime(kwargs[key],datetime.isoformat())
+                    val = datetime.strptime(kwargs[key], "%Y-%m-%dT%H:%M:%S.%f")
                     setattr(self,key,val)
                 elif key != "__class__":
                     setattr(self,key,value)
