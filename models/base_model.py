@@ -7,6 +7,7 @@ class base model is the building block from which other class inherits
 from uuid import uuid4
 from datetime import datetime
 import models
+import storage
 
 class BaseModel:
 
@@ -32,6 +33,7 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new()
 
     def __str__(self):
 
@@ -46,7 +48,7 @@ class BaseModel:
         """
 
         self.updated_at = datetime.now()
-
+        storage.save()
     def to_dict(self):
         """
         Method to return dictionary.
