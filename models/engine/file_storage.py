@@ -31,7 +31,7 @@ class FileStorage:
         
         obj_name = obj.__class__.__name__
         obj_id = obj.id
-        Filestorage.__objects[obj_name + "." + obj_id] = obj
+        FileStorage.__objects[obj_name + "." + obj_id] = obj
 
     def save(self):
         
@@ -43,7 +43,7 @@ class FileStorage:
         for key, value in FileStorage.__objects.items():
             new_dict[key] = value.to_dict()
             with open(FileStorage.__file_path, "w", encoding='utf-8') as file:
-            json.dump(new_dict, file)
+                json.dump(new_dict, file)
 
     def reload(self):
         """
