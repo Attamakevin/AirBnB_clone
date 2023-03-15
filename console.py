@@ -14,6 +14,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
 
     """
@@ -22,8 +23,18 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
     File = None
     __clases = ['BaseModel', 'User', 'Place', 'State',
-                   'City', 'Amenity', 'Review']
-    
+                'City', 'Amenity', 'Review']
+
+    @classmethod
+    def fetch_command(cls, command):
+        commands = {"all": cls.do_all, "show": cls.do_show,
+                    "destroy": cls.do_destroy, "update": cls.do_update,
+                    "count": cls.do_count}
+        if command in commands:
+            return commands[command]
+        else:
+            return None
+
     def do_quit(self, line):
 
         """
@@ -36,22 +47,27 @@ class HBNBCommand(cmd.Cmd):
         """
         to exit the program
         """
+
         return True
+
     def empty_line(self):
+
         """
         commad do nothing when empty line is entered
         """
+
         pass
-    
+
     def help_quit(self):
-   
+
         """
         command to show quit help
         """
+
         print("quit command to exit the progam")
 
-
     def do_create(self, line):
+
         """creates a new instance"""
         if len(line) == 0:
             print("** class name missing **")
@@ -62,7 +78,7 @@ class HBNBCommand(cmd.Cmd):
             newInstance = eval(token[0])()
             newInstance.save()
             print(newInstance.id)
-        except:
+        except(NameError):
             print("** class doesn't exist **")
 
     def do_show(self, line):
@@ -77,7 +93,7 @@ class HBNBCommand(cmd.Cmd):
             return
         try:
             eval(token[0])
-        except:
+        except(NameError):
             print("** class doesn't exist **")
 
         objDict = models.storage.all()
@@ -90,6 +106,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_destroy(self, line):
+
         """Deletes an instance based on the class name"""
         token = line.split()
 
@@ -101,18 +118,19 @@ class HBNBCommand(cmd.Cmd):
 
         try:
             eval(token[0])
-        except:
+        except NameError:
             print("** class doesn't exist **")
         objDict = models.storage.all()
         keyId = token[0] + "." + token[1]
 
         try:
             del objDict[keyId]
-        except:
+        except KeyError:
             print("** no instance found **")
         models.storage.save()
 
     def do_all(self, line):
+
         """ Prints string represention of all instances of a given class """
 
         if not line:
@@ -134,6 +152,7 @@ class HBNBCommand(cmd.Cmd):
             print(newList)
 
     def do_update(self, line):
+
         """ Updates an instance based on the class name and id """
 
         if not line:
@@ -160,7 +179,8 @@ class HBNBCommand(cmd.Cmd):
                         setattr(val, token[2], token[3])
                         storage.save()
                     return
-            print("** no instance found **")       
+            print("** no instance found **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

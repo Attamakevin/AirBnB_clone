@@ -9,11 +9,11 @@ from datetime import datetime
 import models
 from models import storage
 
+
 class BaseModel:
 
-
     """
-	defines all common attributes/methods for other classes
+    defines all common attributes/methods for other classes
     """
 
     def __init__(self, *args, **kwargs):
@@ -21,14 +21,14 @@ class BaseModel:
         """
         initializes the base model
         """
-
+        dateTime = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
-                    val = datetime.strptime(kwargs[key], "%Y-%m-%dT%H:%M:%S.%f")
-                    setattr(self,key,val)
+                    val = datetime.strptime(kwargs[key], dateTime)
+                    setattr(self, key, val)
                 elif key != "__class__":
-                    setattr(self,key,value)
+                    setattr(self, key, value)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
@@ -40,16 +40,21 @@ class BaseModel:
         """
         string representation of the class attribute
         """
+        clsname = self.__class__.__name__
 
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(clsname, self.id, self.__dict__)
+
     def save(self):
+
         """
         method to update class instance
         """
 
         self.updated_at = datetime.now()
         storage.save()
+
     def to_dict(self):
+
         """
         Method to return dictionary.
         """
